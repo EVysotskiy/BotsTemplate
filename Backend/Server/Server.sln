@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{31D31453-57B5-44BE-8CC4-7EEE09086886}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{83B12377-49D8-45D6-BB51-45EDEB92C69A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramBot", "TelegramBot\TelegramBot.csproj", "{C05C0B51-B2B1-4468-8E57-A03B0C907165}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VKBot", "VKBot\VKBot.csproj", "{73741204-43AA-4199-9452-E7279357C9AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscordBot", "DiscordBot\DiscordBot.csproj", "{399D59AE-AB5F-4983-ACC5-383E99FDB3F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatsappBot", "WhatsappBot\WhatsappBot.csproj", "{0B63CD9A-BAF6-49A0-A041-28E4B87B0986}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailDelivery", "MailDelivery\MailDelivery.csproj", "{D29AED1E-E161-4EE5-8573-8E8C54F629A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViberBot", "ViberBot\ViberBot.csproj", "{77D795C0-F653-4886-91BE-2DBB4D8B3B15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31D31453-57B5-44BE-8CC4-7EEE09086886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D31453-57B5-44BE-8CC4-7EEE09086886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D31453-57B5-44BE-8CC4-7EEE09086886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D31453-57B5-44BE-8CC4-7EEE09086886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B12377-49D8-45D6-BB51-45EDEB92C69A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B12377-49D8-45D6-BB51-45EDEB92C69A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B12377-49D8-45D6-BB51-45EDEB92C69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B12377-49D8-45D6-BB51-45EDEB92C69A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C05C0B51-B2B1-4468-8E57-A03B0C907165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05C0B51-B2B1-4468-8E57-A03B0C907165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05C0B51-B2B1-4468-8E57-A03B0C907165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05C0B51-B2B1-4468-8E57-A03B0C907165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73741204-43AA-4199-9452-E7279357C9AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73741204-43AA-4199-9452-E7279357C9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73741204-43AA-4199-9452-E7279357C9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73741204-43AA-4199-9452-E7279357C9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{399D59AE-AB5F-4983-ACC5-383E99FDB3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{399D59AE-AB5F-4983-ACC5-383E99FDB3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{399D59AE-AB5F-4983-ACC5-383E99FDB3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{399D59AE-AB5F-4983-ACC5-383E99FDB3F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B63CD9A-BAF6-49A0-A041-28E4B87B0986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B63CD9A-BAF6-49A0-A041-28E4B87B0986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B63CD9A-BAF6-49A0-A041-28E4B87B0986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B63CD9A-BAF6-49A0-A041-28E4B87B0986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29AED1E-E161-4EE5-8573-8E8C54F629A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29AED1E-E161-4EE5-8573-8E8C54F629A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29AED1E-E161-4EE5-8573-8E8C54F629A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29AED1E-E161-4EE5-8573-8E8C54F629A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D795C0-F653-4886-91BE-2DBB4D8B3B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D795C0-F653-4886-91BE-2DBB4D8B3B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D795C0-F653-4886-91BE-2DBB4D8B3B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D795C0-F653-4886-91BE-2DBB4D8B3B15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91D4B4F9-DAE9-4776-83A0-FDED978DD2A6}
+	EndGlobalSection
+EndGlobal
