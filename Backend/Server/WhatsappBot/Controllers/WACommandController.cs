@@ -32,10 +32,6 @@ public class WACommandController : ApiController
     public async Task<IActionResult> Post([FromBody] Update update,CancellationToken cancellationToken)
     {
         _logger.Log(LogLevel.Debug, $"WA CommandController");
-
-       // var stream = await Request.Content.ReadAsStringAsync();
-       // StreamReader reader = new StreamReader(stream);
-        // string text = reader.ReadToEnd();
         await _updateHandler.Handle(update,cancellationToken);
         return Ok("ok");
     }
@@ -46,10 +42,10 @@ public class WACommandController : ApiController
         _logger.Log(LogLevel.Debug, $"WA Webhook");
 
         var uri = Request.RequestUri;
-        string token = HttpUtility.ParseQueryString(uri.Query).Get("hub.verify_token");
-        string challenge = HttpUtility.ParseQueryString(uri.Query).Get("hub.challenge");
-        string mode = HttpUtility.ParseQueryString(uri.Query).Get("hub.mode");
+        var token = HttpUtility.ParseQueryString(uri.Query).Get("hub.verify_token");
+        var challenge = HttpUtility.ParseQueryString(uri.Query).Get("hub.challenge");
 
+        //"12345678qwerty" replace with the value that you specify in your account
         if (token == "12345678qwerty")
         {
             return Ok(challenge);

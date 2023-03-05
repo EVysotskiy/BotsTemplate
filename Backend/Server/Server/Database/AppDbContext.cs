@@ -11,10 +11,8 @@ namespace Server.Database
         public DbSet<VkUser> VkUsers { get; set; }
         public DbSet<WAUser> WAUsers { get; set; }
         public DbSet<User> Users { get; set; }
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-            
-        }
+        
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         
         public override int SaveChanges()
         {
@@ -28,8 +26,7 @@ namespace Server.Database
             FillUpdatedDate();
             return base.SaveChanges(acceptAllChangesOnSuccess);
         }
-
-
+        
         private void FillUpdatedDate()
         {
             var newEntities = ChangeTracker.Entries()
@@ -50,11 +47,13 @@ namespace Server.Database
 
             foreach (var newEntity in newEntities)
             {
-                if (newEntity != null)
+                if (newEntity == null)
                 {
-                    newEntity.CreatedAt = DateTime.UtcNow;
-                    newEntity.LastModified = DateTime.UtcNow;
+                    continue;
                 }
+                
+                newEntity.CreatedAt = DateTime.UtcNow;
+                newEntity.LastModified = DateTime.UtcNow;
             }
 
             foreach (var modifiedEntity in modifiedEntities)
@@ -68,14 +67,12 @@ namespace Server.Database
             FillUpdatedDate();
             return base.SaveChangesAsync(cancellationToken);
         }
-
-
+        
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess,
             CancellationToken cancellationToken = new CancellationToken())
         {
             FillUpdatedDate();
             return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
-
     }
 }
