@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   converter:
-    container_name: ConverterApp
+    container_name: BotTemplate
     links:
       - db
     depends_on:

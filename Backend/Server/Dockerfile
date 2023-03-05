@@ -4,9 +4,15 @@ EXPOSE 7000
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
+
 COPY ["./Server/Server.csproj", "./"]
 COPY ["./Domain/", "../Domain/"]
 COPY ["./TelegramBot/", "../TelegramBot/"]
+COPY ["./ViberBot/", "../ViberBot/"]
+COPY ["./VKBot/", "../VKBot/"]
+COPY ["./WhatsappBot/", "../WhatsappBot/"]
+COPY ["./MailDelivery/", "../MailDelivery/"]
+
 RUN dotnet restore
 COPY . .
 
@@ -19,11 +25,25 @@ RUN dotnet build -c Release -o /app
 WORKDIR /src/Server
 RUN dotnet build -c Release -o /app
 
+WORKDIR /src/ViberBot
+RUN dotnet build -c Release -o /app
+
+WORKDIR /src/WhatsappBot
+RUN dotnet build -c Release -o /app
+
+WORKDIR /src/VKBot
+RUN dotnet build -c Release -o /app
+
+WORKDIR /src/MailDelivery
+RUN dotnet build -c Release -o /app
+
 FROM build AS publish
+
 RUN dotnet publish -c Release -o /app
 ENV PATH="${PATH}:/root/.dotnet/tools"
 RUN dotnet tool install -g dotnet-ef --version 6.0.1
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
+
 ENTRYPOINT ["dotnet", "Server.dll"]
